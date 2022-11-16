@@ -24,6 +24,7 @@ WORKDIR /app
 # 选用国内镜像源以提高下载速度
 RUN pip config set global.index-url http://mirrors.cloud.tencent.com/pypi/simple \
 && pip config set global.trusted-host mirrors.cloud.tencent.com \
+&& pip install pandas \
 && pip install mediapipe -i https://pypi.tuna.tinghua.edu.cn/simple \
 && pip install numpy -i https://pypi.tuna.tinghua.edu.cn/simple \
 && pip install opencv -i https://pypi.tuna.tinghua.edu.cn/simple \
